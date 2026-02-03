@@ -1,0 +1,45 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.4.0'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdk 35
+    buildToolsVersion "35.0.0"
+    ndkVersion "27.1.12297006"
+
+    namespace 'com.pilloxa.dfu' // ЗАМЕНИТЕ на реальный package
+
+    defaultConfig {
+        minSdk 28
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    
+    lintOptions {
+        abortOnError false
+    }
+}
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'no.nordicsemi.android:dfu:2.5.0'
+}

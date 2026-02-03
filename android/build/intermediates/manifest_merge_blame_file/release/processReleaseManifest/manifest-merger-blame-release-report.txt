@@ -1,0 +1,14 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.pilloxa.dfu" >
+4
+5    <uses-sdk android:minSdkVersion="28" />
+6
+7    <application>
+7-->/Users/turtton/prosthesis_app/node_modules/react-native-nordic-dfu/android/src/main/AndroidManifest.xml:4:5-6:19
+8        <service android:name="com.pilloxa.dfu.DfuService" />
+8-->/Users/turtton/prosthesis_app/node_modules/react-native-nordic-dfu/android/src/main/AndroidManifest.xml:5:9-46
+8-->/Users/turtton/prosthesis_app/node_modules/react-native-nordic-dfu/android/src/main/AndroidManifest.xml:5:18-44
+9    </application>
+10
+11</manifest>

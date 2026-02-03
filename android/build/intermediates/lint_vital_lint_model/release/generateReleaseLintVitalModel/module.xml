@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/Users/turtton/prosthesis_app/node_modules/react-native-nordic-dfu/android"
+    name=":react-native-nordic-dfu"
+    type="LIBRARY"
+    maven="EVEREST:react-native-nordic-dfu:unspecified"
+    agpVersion="8.8.0"
+    buildFolder="build"
+    bootClassPath="/Users/turtton/Library/Android/sdk/platforms/android-35/android.jar:/Users/turtton/Library/Android/sdk/build-tools/35.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-35"
+    neverShrinking="true">
+  <lintOptions
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

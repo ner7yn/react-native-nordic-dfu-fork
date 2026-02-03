@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.pilloxa.dfu.react-native-nordic-dfu-mergeReleaseResources-27:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/turtton/.gradle/caches/8.10.2/transforms/3f27d539034503c906190e54bde894d0/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.pilloxa.dfu.react-native-nordic-dfu-release-29:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/turtton/.gradle/caches/8.10.2/transforms/3f27d539034503c906190e54bde894d0/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

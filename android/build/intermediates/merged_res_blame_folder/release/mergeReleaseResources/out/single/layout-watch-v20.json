@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.pilloxa.dfu.react-native-nordic-dfu-release-29:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.pilloxa.dfu.react-native-nordic-dfu-appcompat-1.6.1-7:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "com.pilloxa.dfu.react-native-nordic-dfu-release-29:/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "com.pilloxa.dfu.react-native-nordic-dfu-appcompat-1.6.1-7:/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    }
+]
