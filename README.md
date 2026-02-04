@@ -147,13 +147,13 @@ Starts the DFU process
 **Examples**
 
 ```javascript
-import { NordicDFU, DFUEmitter } from "react-native-nordic-dfu";
+import { RNNordicDFU, DFUEmitter } from "react-native-nordic-dfu";
 
-NordicDFU.startDFU({
-  deviceAddress: "C3:53:C0:39:2F:99",
-  deviceName: "Pilloxa Pillbox",
-  filePath: "/data/user/0/com.nordicdfuexample/files/RNFetchBlobTmp4of.zip",
-})
+RNNordicDFU.startDFU(
+  deviceAddress,
+  deviceName,
+  filePath,
+)
   .then((res) => console.log("Transfer done:", res))
   .catch(console.log);
 ```
@@ -167,7 +167,7 @@ Event emitter for DFU state and progress events
 **Examples**
 
 ```javascript
-import { NordicDFU, DFUEmitter } from "react-native-nordic-dfu";
+import { RNNordicDFU, DFUEmitter } from "react-native-nordic-dfu";
 
 DFUEmitter.addListener(
   "DFUProgress",
@@ -198,11 +198,11 @@ DocumentPicker.pick({ type: "public.archive" });
 If your device is getting disconnected after enabling DFU, you should set `false` value to `alternativeAdvertisingNameEnabled` prop while starting DFU.
 
 ```javascript
-NordicDFU.startDFU({
-  deviceAddress: "XXXXXXXX-XXXX-XXXX-XXXX-XX",
-  filePath: firmwareFile.uri,
-  alternativeAdvertisingNameEnabled: false,
-});
+RNNordicDFU.startDFU(
+  deviceAddress = "XXXXXXXX-XXXX-XXXX-XXXX-XX",
+  filePath = firmwareFile.uri,
+  alternativeAdvertisingNameEnabled = false,
+);
 ```
 
 ### On Android
@@ -217,7 +217,7 @@ const destination = RNFS.CachesDirectoryPath + "/firmwareFile.zip";
 
 await RNFS.copyFile(formatFile.uri, destination);
 
-NordicDFU.startDFU({ deviceAddress: "XX:XX:XX:XX:XX:XX", filePath: destination });
+RNNordicDFU.startDFU( deviceAddress = "XX:XX:XX:XX:XX:XX", filePath = destination);
 ```
 
 If you get a disconnect error sometimes while starting the DFU process, you should connect to the device before starting it.
