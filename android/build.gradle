@@ -15,7 +15,7 @@ android {
     buildToolsVersion "35.0.0"
     ndkVersion "27.1.12297006"
 
-    namespace 'com.pilloxa.dfu' // ЗАМЕНИТЕ на реальный package
+    namespace 'com.ner7yn.dfu' // ЗАМЕНИТЕ на реальный package
 
     defaultConfig {
         minSdk 28
@@ -45,9 +45,7 @@ dependencies {
 }
 
 afterEvaluate {
-    tasks.matching { it.name.startsWith("package") && it.name.endsWith("Resources") }.all { pkgTask ->
-        pkgTask.dependsOn(
-                tasks.matching { it.name.contains("generate") && it.name.contains("ResValues") }
-        )
+    tasks.named("packageDebugResources").configure {
+        dependsOn(tasks.named("generateDebugResValues"))
     }
 }
