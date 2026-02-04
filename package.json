@@ -1,7 +1,7 @@
 {
   "name": "@ner7yn/react-native-nordic-dfu",
   "version": "3.2.2",
-  "description": "Nordic Device Firmware Update for React Native",
+  "description": "Fork of react-native-nordic-dfu with custom fixes",
   "main": "index.js",
   "url": "https://github.com/ner7yn/react-native-nordic-dfu-fork.git",
   "repository": {
@@ -20,7 +20,6 @@
   ],
   "author": "ner7yn",
   "license": "MIT",
-  "description" : "Fork of react-native-nordic-dfu with custom fixes",
   "peerDependencies": {
     "react-native": ">= 0.45.1"
   },
@@ -40,5 +39,8 @@
       "git add README.md"
     ]
   },
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "dependencies": {
+    "@ner7yn/react-native-nordic-dfu": "^3.2.2"
+  }
 }
