@@ -1,6 +1,5 @@
 import { NativeModules, NativeEventEmitter, Platform } from "react-native";
 const { RNNordicDfu } = NativeModules;
-const NordicDFU = { startDFU };
 
 function rejectPromise(message) {
   return new Promise((resolve, reject) => {
@@ -42,20 +41,36 @@ function startDFU({
   deviceAddress,
   deviceName = null,
   filePath,
-  alternativeAdvertisingNameEnabled = true
+  alternativeAdvertisingNameEnabled = true,
 }) {
-  if (deviceAddress == undefined) {
+  if (!deviceAddress) {
     return rejectPromise("No deviceAddress defined");
   }
-  if (filePath == undefined) {
+  if (!filePath) {
     return rejectPromise("No filePath defined");
   }
+
   const upperDeviceAddress = deviceAddress.toUpperCase();
-  if (Platform.OS === 'ios') {
-    return RNNordicDfu.startDFU(upperDeviceAddress, deviceName, filePath, alternativeAdvertisingNameEnabled);
+
+  if (Platform.OS === "ios") {
+    return RNNordicDfu.startDFU(
+      upperDeviceAddress,
+      deviceName,
+      filePath,
+      alternativeAdvertisingNameEnabled
+    );
   }
-  return RNNordicDfu.startDFU(upperDeviceAddress, deviceName, filePath);
+
+  return RNNordicDfu.startDFU(
+    upperDeviceAddress,
+    deviceName,
+    filePath
+  );
 }
+
+const NordicDFU = {
+  startDFU,
+};
 
 /**
  * Event emitter for DFU state and progress events

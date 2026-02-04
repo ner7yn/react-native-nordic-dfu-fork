@@ -43,3 +43,11 @@ dependencies {
     implementation 'com.facebook.react:react-native:+'
     implementation 'no.nordicsemi.android:dfu:2.5.0'
 }
+
+afterEvaluate {
+    tasks.matching { it.name.startsWith("package") && it.name.endsWith("Resources") }.all { pkgTask ->
+        pkgTask.dependsOn(
+                tasks.matching { it.name.contains("generate") && it.name.contains("ResValues") }
+        )
+    }
+}
