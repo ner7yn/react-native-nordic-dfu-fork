@@ -1,6 +1,6 @@
 {
   "name": "@ner7yn/react-native-nordic-dfu",
-  "version": "3.2.4",
+  "version": "4.0.0",
   "description": "Fork of react-native-nordic-dfu with custom fixes",
   "main": "index.js",
   "url": "https://github.com/ner7yn/react-native-nordic-dfu-fork.git",
