@@ -1,4 +1,4 @@
-package com.pilloxa.dfu;
+package com.ner7yn.dfu;
 
 import android.app.NotificationManager;
 import android.content.Context;
